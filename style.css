@@ -1,6 +1,111 @@
+:root {
+
+    --color-text-head: white;
+    --color-text-general: #3b3b3b;
+
+    --color-plan: #7987ac;
+    --color-starter: #4f628d;
+    --color-econom: #2f4173;
+    --color-standard: #162954;
+    --color-frofessional: #07153a;
+    
+    --color-dark: #dbdbdb;
+    --color-norm: #f3f3f3;
+    --color-light: #f3f3f3;
+
+    --color-border: #635d5d;
+    --border-radius: 10px;
+
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
 table {
+    min-width: 700px;
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    color: var(--color-text-general);
     border-collapse: collapse;
 }
-th,td {
-    border: 1px solid black;
+
+/*thead*/
+thead {
+    color: var(--color-text-head);
+}
+thead tr th:first-child {
+    width: 25%;
+    border-top-left-radius: var(--border-radius);
+    background-color: var(--color-plan);
+}
+thead tr th:nth-child(2) {
+    background-color: var(--color-starter);
+}
+thead tr th:nth-child(3) {
+    background-color: var(--color-econom);
+}
+thead tr th:nth-child(4) {
+    background-color: var(--color-standard);
+}
+thead tr th:last-child {
+    border-top-right-radius: var(--border-radius);
+    background-color: var(--color-frofessional);
+}
+thead tr th p:nth-child(2){
+    font-size: 32px;
+
+    margin: 0;
+}
+thead tr th p:nth-child(3){
+    font-size: 18px;
+    margin: 10px;
+}
+
+/*tbody*/
+tbody tr th:first-child{
+    text-align: left;
+    padding: 15px;
+}
+tbody tr td:nth-child(n) {
+    text-align: center;
+    text-transform: capitalize;
+}
+tbody tr:nth-child(1) td:not(:last-child) {
+    text-transform: uppercase;
+}
+tbody tr:nth-child(2) td {
+    text-transform: uppercase;
+}
+tbody tr:nth-child(odd)>*:nth-child(odd),
+tfoot th:nth-child(odd) {
+    background-color: var(--color-dark);
+}
+tbody tr:nth-child(odd)>*:nth-child(even),
+tfoot th:nth-child(even) {
+    background-color: var(--color-norm);
+}
+tbody tr th:nth-child(n) {
+    font-weight: 500;
+    text-transform: capitalize;
+}
+/*tfoot*/
+
+tfoot th:nth-child(n) {
+    padding: 10px;
+}
+tfoot th:first-child {
+    border-bottom-left-radius: var(--border-radius);
+}
+tfoot th:last-child {
+    border-bottom-right-radius: var(--border-radius);
+}
+tfoot th:nth-child(n) button {
+    background-color: var(--color-dark);
+    border: 1px solid var(--color-border);
+    padding: 10px 30px;
+    text-transform: uppercase;
+}
+tfoot th:nth-child(n) button:hover {
+    background-color: var(--color-light);
+    cursor: pointer;
 }
