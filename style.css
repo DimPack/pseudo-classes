@@ -88,6 +88,11 @@ tbody tr th:nth-child(n) {
     font-weight: 500;
     text-transform: capitalize;
 }
+tbody tr th:nth-child(odd),
+tbody tr td:nth-child(odd) {
+    background-color: var(--color-norm);
+}
+
 /*tfoot*/
 
 tfoot th:nth-child(n) {
